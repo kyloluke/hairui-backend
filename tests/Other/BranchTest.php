@@ -26,6 +26,7 @@ class BranchTest extends TestCase
         dump($res);
         dump($branch);
 
+
         if($branch == 'develop' && $res) {
 //            throw new \Exception('test error');
             $this->throwException(new \Exception('test error'));

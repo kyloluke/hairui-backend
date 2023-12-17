@@ -13,7 +13,6 @@ class ExampleTest extends TestCase
      */
     public function test_example()
     {
-        throw new \Exception('test error');
-//        $this->assertTrue(true);
+        $this->assertTrue(false);
     }
 }

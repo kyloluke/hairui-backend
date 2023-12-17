@@ -11,6 +11,8 @@ class ExampleTest extends TestCase
      */
     public function test_that_true_is_true(): void
     {
-        $this->assertTrue(true);
+
+        throw new \Exception('test error 111');
+//        $this->assertTrue(true);
     }
 }

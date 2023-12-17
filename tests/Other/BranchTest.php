@@ -28,7 +28,7 @@ class BranchTest extends TestCase
         dump($res);
         dump($branch);
 
-        if($branch == 'develop' && $res) {
+        if($branch == 'master' && $res) {
             fail('test error');
         } else {
             $this->assertTrue(true);

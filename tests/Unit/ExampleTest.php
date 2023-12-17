@@ -13,6 +13,14 @@ class ExampleTest extends TestCase
      */
     public function test_example()
     {
+
+        $branch = getenv('CIRCLE_BRANCH');
+
+        $res = file_exists(base_path().'/only_develop_file.txt');
+
+        dump($res);
+
+        dump($branch);
         $this->assertTrue(false);
     }
 }

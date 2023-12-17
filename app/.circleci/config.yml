@@ -9,8 +9,6 @@ jobs:
 
     steps:
       - checkout
-
-      # Setup Laravel environment
       - run:
           name: Setup Laravel
           command: |
@@ -19,7 +17,16 @@ jobs:
             cp .env.example .env
             php artisan key:generate
 
-      # Run tests
       - run:
           name: Run Tests
           command: php artisan test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - '*'

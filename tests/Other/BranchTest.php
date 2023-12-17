@@ -22,9 +22,9 @@ class BranchTest extends TestCase
 //        $res = app()->environment('production');
 
 //        dump(base_path().'/only_develop_file.txt');
-        dump(realpath(base_path().'/only_develop_file.txt'));
 
-        $res = file_exists(realpath(base_path().'/only_develop_file.txt'));
+//        $res = file_exists(realpath(base_path().'/only_develop_file.txt'));
+        $res = file_exists(base_path().'/only_develop_file.txt');
         dump($res);
         dump($branch);
 
